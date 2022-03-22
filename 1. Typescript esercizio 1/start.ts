@@ -1,6 +1,6 @@
 // Dichiarazioni enum per più possibilità
-enum Roles {staff,student,manager,admin};
-enum Genders {male,female,other};
+enum Role {STAFF='staff',STUDENT='student',MANAGER='manager',ADMIN='admin'};
+enum Gender {MALE='male',FEMALE='female',OTHER='other'};
 
 const obj: obj = {
 	id: 3487,
@@ -13,7 +13,7 @@ const obj: obj = {
         street: 'Via roma 10',
         postalCode: '00100'
     },
-    role: Roles.staff, // Ruoli possibili: 'staff', 'student', 'manager', 'admin'
+    role: Role.STAFF, // Ruoli possibili: 'staff', 'student', 'manager', 'admin'
     username: 'MarioRossi80',
     profilePhotoUrl: 'https://bit.ly/3yRngEP',
     companies: [
@@ -38,7 +38,7 @@ const obj: obj = {
             }
         }
 	],
-    gender: Genders.male // Generi possibili: 'male', 'female', 'other'
+    gender: Gender.MALE // Generi possibili: 'male', 'female', 'other'
 }
 
 
@@ -62,9 +62,9 @@ interface obj {
     age:number,
     dateOfBirth: string,
     address?: Address,
-    role: Roles,
+    role: Role,
     username: string,
     profilePhotoUrl: string;
     companies:Company[];
-    gender: Genders
+    gender: Gender
 }
